@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- linking html to JS -->
+  <script src="studentResultPage.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student result page</title>
+</head>
+<!--CSS For the webpage -->
+<style>
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  table {
+    border: 1px solid;
+  }
+
+  tr {
+    border: 1px solid;
+  }
+
+  body {
+    background: #7EB6FD;
+    text-align: center;
+  }
+
+  button {
+    display: inline-block;
+    background-color: darkorange;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    width: 150px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    background-color: #FBB785;
+  }
+
+  button:hover span {
+    padding-right: 25px;
+  }
+
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  #logo {
+    position: relative;
+    top: 45px;
+    left: -500px;
+  }
+
+  #start {
+    position: relative;
+    top: -80px;
+  }
+
+  #Butons {
+    position: absolute;
+    right: 100px;
+    top: 40px;
+  }
+</style>
+
+
+<!-- onload function to run the function as the page loads up-->
+
+<body onload="Results()" onload="viewAnnouncement()">
+
+  <div id="Butons">
+    <a href="/Searchpage.html">
+      <button>Search Page</button>
+    </a>
+    <br>
+    <a href="/main page.html">
+      <button>Home Page</button>
+    </a>
+  </div>
+
+
+
+  <div id="logo">
+    <img src="/IMG/northpark_logo.png" height="125px" width="125px">
+  </div>
+  <div id="start">
+    <h1><u>Student's Announcement Result Page</u></h1>
+  </div>
+  <br>
+  <br>
+  <h3>Here you will see all announcements that match the options you selected earlier.</h3>
+
+
+
+
+  <!--<P> tag used for the function when it prints the announcement the teacher created-->
+  <p id="SResults">Sorry, there are no matches</p>
+
+
+
+</body>
+
+</html>

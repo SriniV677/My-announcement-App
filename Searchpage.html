@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--linking html to js-->
+  <script src="Studentsearch.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Search page</title>
+</head>
+
+<!--CSS for the Search Page-->
+
+<style>
+  body {
+    background-color: #F6B14E;
+    color: black;
+  }
+
+  button {
+    display: inline-block;
+    background-color: darkorange;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    width: 150px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    background-color: #FBB785;
+  }
+
+  button:hover span {
+    padding-right: 25px;
+  }
+
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  #Start {
+    text-align: center;
+  }
+
+  #Start1 {
+    padding: 20px;
+    background-color: orange;
+    border-radius: 40px;
+    border: #cccccc;
+    text-align: center;
+    width: 150px;
+    position: relative;
+    bottom: 50px;
+    right: 25px;
+  }
+
+  #Logo {
+    position: relative;
+    left: -500px;
+    bottom: 50px;
+  }
+
+  #Main {
+    padding: 7%;
+    border-radius: 7%;
+    background-color: #3E60FA;
+    width: 650px;
+    height: 450px;
+  }
+
+  #Clubs {
+    padding: 20px;
+    background-color: orange;
+    border-radius: 40px;
+    border: #cccccc;
+    text-align: center;
+    width: 180px;
+    height: 190px;
+    position: relative;
+    bottom: 319px;
+    left: 250px;
+  }
+
+  #Gender {
+    padding: 20px;
+    background-color: orange;
+    border-radius: 40px;
+    border: #cccccc;
+    text-align: center;
+    width: 175px;
+    position: relative;
+    bottom: 440px;
+  }
+
+  #Date {
+    padding: 20px;
+    background-color: orange;
+    border-radius: 40px;
+    border: #cccccc;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    bottom: 650px;
+  }
+
+  #submit {
+    position: relative;
+    bottom: 500px;
+  }
+
+  #Topper {
+    text-align: center;
+
+  }
+
+  #npssLogo {
+    position: absolute;
+    left: 180px;
+    top: 35px;
+  }
+
+  #homePageButton {
+    position: absolute;
+    right: 180px;
+    top: 40px;
+  }
+</style>
+
+
+
+
+<body>
+  <!--Header-->
+  <div id="Topper">
+    <img id="npssLogo" src="/IMG/northpark_logo.png" height="125px" width="125px" style="display: inline-block;">
+    <h1 style="text-align: center; display: inline-block; padding-top: 25px;"><u>Student Announcement Search Page</u>
+    </h1>
+    <a href="/main page.html" id="homePageButton"><button
+        style="background-color: #3E60FA; display: inline-block;">HomePage</button></a>
+  </div>
+  <center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Area to create the announcement-->
+    <div id="Main">
+      <h2 style="text-align:center; position:relative; bottom: 65px;"><u>Find your Announcement here:</u></h2>
+
+      <!--Grades Section-->
+      <br>
+      <div style="text-align: center;" class="container">
+        <div id="Start1">
+
+          <label style="font-size: 20px;" for="htmlTsgrades">Grades:</label>
+          <br>
+          <br>
+          <!--Check Boxes that have the grades-->
+          <!--Used type=Checkbox and gave it an id so it can be used in the JavaScript-->
+          <input type="checkbox" id="G9HTML"> Grade 9
+          <br>
+          <br>
+          <input type="checkbox" id="G10HTML"> Grade 10
+          <br>
+          <br>
+          <input type="checkbox" id="G11HTML"> Grade 11
+          <br>
+          <br>
+          <input type="checkbox" id="G12HTML"> Grade 12
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+      <br>
+      <!--Club Section-->
+      <div id="Clubs" style="text-align: center;">
+        <label style="font-size: 20px;" for="CLUBSHTML">Clubs:</label>
+        <br>
+        <!--Ceated Drop-Down list, and gave it an id so it can be used in JavaScript-->
+        <select id="CLUBSHTML">
+          <!--Teachers can select the club of thier chocie here-->
+          <!--<option> key allows the user to select the club of thier choice-->
+          <option value="All Clubs">All Clubs</option>
+          <option value="Hack Club">Hack Club</option>
+          <option value="DECA">DECA</option>
+          <option value="HOSA">Hosa</option>
+          <option value="ModelUN">Model UN</option>
+          <option value="Basketball Team">Basketball Team</option>
+          <option value="Baseball Team">Baseball Team</option>
+          <option value="Art Club">Art Club</option>
+          <option value="Robotics Club">Robotics Club</option>
+          <option value="Music Club">Music Club</option>
+          <option value="Soccer Team">Soccer Team</option>
+
+        </select>
+        <br>
+        <br>
+      </div>
+
+      <!--Gender Section-->
+      <div id="Gender" style="text-align: center;">
+        <label style="font-size: 20px;" for="htmlTGender">Genders:</label>
+        <br>
+        <br>
+        <!--Teachers can Check the box for what gender they want-->
+        <input type="checkbox" id="MaleHTML">Male</input>
+        <input type="checkbox" id="FemaleHTML">Female</input>
+        <br>
+        <br>
+      </div>
+
+
+
+      <div id="Date" style="text-align: center;">
+        <label>Date: </label>
+        <input type="date" id="htmlSDate">
+      </div>
+
+      <!--Button to submit all selections-->
+      <div id="submit" style="text-align: center;">
+        <br>
+        <br>
+        <a href="studentresultspage.html"><button onClick="ButtonSubmit()" id="htmlSSubmit"
+            class="submit">Submit</button></a>
+        <!--Reset button for teachers to delete everything they selected-->
+        <button id="htmlTReset" class="reset">Reset All</button>
+      </div>
+    </div>
+  </center>
+
+
+
+</body>
+
+
+</html>

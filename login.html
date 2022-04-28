@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="teacherLogin.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Teacher Login</title>
+</head>
+<!--The CSS for the main page-->
+<style>
+  body {
+    background-image: url("/IMG/North\ Park\ bettrr.jpg");
+    background-size: cover;
+    opacity: 0.91;
+
+  }
+
+  button {
+    display: inline-block;
+    background-color: #F97C21;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    width: 150px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    background-color: #FBB785;
+  }
+
+  button:hover span {
+    padding-right: 25px;
+  }
+
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  h2 {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    background-color: orange;
+    border-radius: 20px;
+    width: 30%;
+    border: 4px double #cccccc;
+
+  }
+
+  h1 {
+    color: black;
+    text-align: center;
+  }
+
+  #Background {
+    background-color: grey;
+    padding: 40px;
+    border-radius: 40px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</style>
+
+<body>
+
+  <!--Linking Javascript file to HTMl -->
+  <script src="teacherLogin.js"></script>
+  <!--Creating Div ID for the CSS -->
+  <div id="Background">
+    <center>
+      <h2>Please Login here</h2>
+    </center>
+    <div style="text-align: center; color: black;" class="container" id="">
+      <!--Teachers Login Sign up-->
+      <label><b>Username</b></label>
+      <input id="Username" type="text" placeholder="Enter here" required>
+      <br>
+      <label><b>Password</b></label>
+      <input id="Password" type="password" placeholder="Enter here" required>
+      <br>
+      <br>
+      <h1 id="Incorrect" style="text-align: center"></h1>
+      <button type="submit" onclick="login()">Login</button>
+      <label>
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+</body>
+
+</html>
